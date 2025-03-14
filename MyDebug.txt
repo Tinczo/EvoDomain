@@ -1,0 +1,12 @@
+---
+runner.py:
+
+        if algorithm_name == "mcmc_domain":
+            # self.fitness = mcmc_fitness
+            pass
+
+---
+pip install networkx[default]
+
+---
+
