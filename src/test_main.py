@@ -6,6 +6,7 @@ import time
 import csv
 from shutil import copyfile
 from colorama import Fore, Style
+from src.domain.Boundary import boundary_points
 from src.test_tools import show_graph, extract_pdf, extract_dot, repair_path_file, pc_extract, pc_num_extract, \
     max_line, get_argument_and_type, percentage
 from src.code_coverage import cfg_coverage
