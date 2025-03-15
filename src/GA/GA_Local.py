@@ -149,7 +149,7 @@ class GA_Local:
         cv = KFold(n_splits=10, random_state=1, shuffle=True)
         # create model
         max_depth = final_df.shape[0] * 0.1
-        clf = RandomForestClassifier(max_depth=max_depth, random_state=0, n_jobs=-1)
+        clf = RandomForestClassifier(max_depth=int(max_depth), random_state=0, n_jobs=-1)
         print("model is created ...")
         # evaluate model
         scoring = ['accuracy', 'f1']

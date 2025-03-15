@@ -1,7 +1,7 @@
 import math
 import sys
-sys.path.append(r'G:\Domain_GA\src\instrument')
-sys.path.append(r'G:\Domain_GA\src')
+sys.path.append(r'C:\Python\EvoDomain\src\instrument')
+sys.path.append(r'C:\Python\EvoDomain\src')
 from src.runner import evaluate_branch_distance
 from Coverage import cover_decorator
 
