@@ -1,8 +1,14 @@
+import os
 import sys
 
-sys.path.append(r'C:\Python\EvoDomain')
-sys.path.append(r'C:\Python\EvoDomain\src')
-sys.path.append(r'C:\Python\EvoDomain\src\sut')
+from dotenv import load_dotenv
+load_dotenv()
+
+PROJECTPATH = os.getenv('PROJECTPATH')
+
+sys.path.append(PROJECTPATH)
+sys.path.append(PROJECTPATH+r'\src')
+sys.path.append(PROJECTPATH+r'\src\sxut')
 
 
 from src.test_main import domain_extraction
@@ -21,13 +27,13 @@ def ga(execution_path, boundary_delta, input_path, input_file, func, output_path
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
     import sys
+    
+    sys.path.append(PROJECTPATH)
+    sys.path.append(PROJECTPATH+r'\src')
+    sys.path.append(PROJECTPATH+r'\src\sut')
 
-    sys.path.append(r'C:\Python\EvoDomain')
-    sys.path.append(r'C:\Python\EvoDomain\src')
-    sys.path.append(r'C:\Python\EvoDomain\src\sut')
-
-    input_path = r"C:\Python\EvoDomain\src\sut"
-    output_path = r"C:\Python\EvoDomain\experiments"
+    input_path = PROJECTPATH+r"\src\sut"
+    output_path = PROJECTPATH+r"\experiments"
 
     input_file = "equation1.py"
     func = "equation1"
