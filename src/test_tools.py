@@ -251,7 +251,8 @@ def cyclomatic(func):
 def get_annotations(mod, func):
     # extract argument name and types of function that given by user as SUT
     var_typ = []
-    exec(f"from {mod} import {func}")
+    exec(f"from {mod} import {func}", globals())
+
     sig = inspect.signature(eval(func))
     for i in sig.parameters.values():
         b = str(i.annotation)
@@ -263,7 +264,7 @@ def get_annotations(mod, func):
 def get_argument_and_type(path, mod, function):
     # input argument and their type
     sys.path.append(path)
-    exec(f"from {mod} import {function}")
+    exec(f"from {mod} import {function}", globals())
     arg = {}
     arguments = get_annotations(mod, function)
     for i, j in arguments:

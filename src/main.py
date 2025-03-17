@@ -1,6 +1,9 @@
 import sys
+
 sys.path.append(r'C:\Python\EvoDomain')
 sys.path.append(r'C:\Python\EvoDomain\src')
+sys.path.append(r'C:\Python\EvoDomain\src\sut')
+
 
 from src.test_main import domain_extraction
 
@@ -17,6 +20,12 @@ def ga(execution_path, boundary_delta, input_path, input_file, func, output_path
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    import sys
+
+    sys.path.append(r'C:\Python\EvoDomain')
+    sys.path.append(r'C:\Python\EvoDomain\src')
+    sys.path.append(r'C:\Python\EvoDomain\src\sut')
+
     input_path = r"C:\Python\EvoDomain\src\sut"
     output_path = r"C:\Python\EvoDomain\experiments"
 
