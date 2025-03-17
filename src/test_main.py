@@ -54,7 +54,8 @@ class domain_extraction:
     def get_code(self):
         # read program under test source code as input to adopted source code style
         sys.path.append(self.input_path)
-        exec(f"from {self.file} import {self.function}")
+        path = f"from src.sut.{self.file} import {self.function}"
+        exec(path, globals())
         self.source = inspect.getsource(
             eval(f"{self.function}"))
         return (self)

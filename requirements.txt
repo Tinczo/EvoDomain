@@ -12,3 +12,4 @@ scikit_learn==1.6.1
 tqdm==4.67.1
 truths==1.2
 pydot==3.0.4
+python-dotenv==1.0.1

@@ -262,7 +262,7 @@ def multi_swarm_fitness(x):
 
     exe_file = instrumented_file
     sys.path.append(out_path)
-    exec(f"from {instrumented_file} import {instrumented_file}")
+    exec(f"from {instrumented_file} import {instrumented_file}", globals())
     argss = ""
     for i in range(0, dims):
         argss += f"x[{str(i)}],"
@@ -526,7 +526,7 @@ def boundary_fitness(x):
 
     exe_file = instrumented_file
     sys.path.append(out_path)
-    exec(f"from {instrumented_file} import {instrumented_file}")
+    exec(f"from {instrumented_file} import {instrumented_file}", globals()),
     argss = ""
     for i in range(0, dims):
         argss += f"x[{str(i)}],"
